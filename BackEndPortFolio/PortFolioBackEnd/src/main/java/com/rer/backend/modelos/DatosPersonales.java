@@ -43,7 +43,8 @@ public class DatosPersonales {
         this.fecha_nacimiento = fecha_nacimiento;
         this.estado_civil = estado_civil;
         this.correo_electronico = correo_electronico;
-    }          
+    }
+      
 }
 
 

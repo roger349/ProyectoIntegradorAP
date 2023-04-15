@@ -24,10 +24,10 @@
             ],
             "styles": [
               "src/styles.css",
-              "D:/trabajo integrador/FrontEnd/PortfolioFrontEnd/node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "D:/ProyectoApIntegrador/FrontEndPortFolio/PortFolioFrontEnd/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "D:/trabajo integrador/FrontEnd/PortfolioFrontEnd/node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "D:/ProyectoApIntegrador/FrontEndPortFolio/PortFolioFrontEnd/node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
