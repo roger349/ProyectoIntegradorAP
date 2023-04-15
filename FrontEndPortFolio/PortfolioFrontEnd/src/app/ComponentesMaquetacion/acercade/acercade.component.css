@@ -1,0 +1,23 @@
+ div h1 {
+    color:darkgray;
+    text-align: center;
+    font-size: small;
+  }     
+  div h2 {
+    color:darkgray;
+    text-align: left;
+    font-size: small;
+    margin-left: 1%;
+  } 
+  div h3 {
+    color:darkgray;
+    text-align: left;
+    font-size: small;
+    margin-left: 1%;
+  }
+  div p {
+    color:darkgray;
+    float: center;
+    font-size: medium;
+    margin-left: 65px;
+  }                
