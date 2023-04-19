@@ -6,11 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 @Entity
 @Table(name="tecnologias")
 public class Tecnologias {
@@ -30,5 +26,30 @@ public class Tecnologias {
         this.id_tecnologia = id_tecnologia;
         this.nombre_tecnologia = nombre_tecnologia;
         this.porcentaje_tecnologia = porcentaje_tecnologia;
-    }     
+    }
+
+    public long getId_tecnologia() {
+        return id_tecnologia;
+    }
+
+    public void setId_tecnologia(long id_tecnologia) {
+        this.id_tecnologia = id_tecnologia;
+    }
+
+    public String getNombre_tecnologia() {
+        return nombre_tecnologia;
+    }
+
+    public void setNombre_tecnologia(String nombre_tecnologia) {
+        this.nombre_tecnologia = nombre_tecnologia;
+    }
+
+    public String getPorcentaje_tecnologia() {
+        return porcentaje_tecnologia;
+    }
+
+    public void setPorcentaje_tecnologia(String porcentaje_tecnologia) {
+        this.porcentaje_tecnologia = porcentaje_tecnologia;
+    }
+    
 }

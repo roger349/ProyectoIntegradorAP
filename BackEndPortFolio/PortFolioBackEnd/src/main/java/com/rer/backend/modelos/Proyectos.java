@@ -6,11 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 @Entity
 @Table(name="proyectos")
 public class Proyectos {
@@ -30,5 +26,30 @@ public class Proyectos {
         this.id_proyecto = id_proyecto;
         this.nombre_proyecto = nombre_proyecto;
         this.descripcion_proyecto = descripcion_proyecto;
-    }   
+    }
+
+    public long getId_proyecto() {
+        return id_proyecto;
+    }
+
+    public void setId_proyecto(long id_proyecto) {
+        this.id_proyecto = id_proyecto;
+    }
+
+    public String getNombre_proyecto() {
+        return nombre_proyecto;
+    }
+
+    public void setNombre_proyecto(String nombre_proyecto) {
+        this.nombre_proyecto = nombre_proyecto;
+    }
+
+    public String getDescripcion_proyecto() {
+        return descripcion_proyecto;
+    }
+
+    public void setDescripcion_proyecto(String descripcion_proyecto) {
+        this.descripcion_proyecto = descripcion_proyecto;
+    }
+    
 }

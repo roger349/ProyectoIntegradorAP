@@ -6,11 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 @Entity
 @Table(name="usuario")
 public class Usuario {
@@ -31,4 +27,28 @@ public class Usuario {
         this.nombre_usuario = nombre_usuario;
         this.password_usuario = password_usuario;
     }
+
+    public long getId_dni() {
+        return id_dni;
+    }
+
+    public void setId_dni(long id_dni) {
+        this.id_dni = id_dni;
+    }
+
+    public String getNombre_usuario() {
+        return nombre_usuario;
+    }
+
+    public void setNombre_usuario(String nombre_usuario) {
+        this.nombre_usuario = nombre_usuario;
+    }
+
+    public String getPassword_usuario() {
+        return password_usuario;
+    }
+
+    public void setPassword_usuario(String password_usuario) {
+        this.password_usuario = password_usuario;
+    }  
 }

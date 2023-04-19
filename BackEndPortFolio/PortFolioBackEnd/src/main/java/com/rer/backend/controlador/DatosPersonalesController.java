@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200/")
+//@CrossOrigin(origins = "http://localhost:4200/")
 public class DatosPersonalesController {
     @Autowired
     private IDatosPersonalesService IDatosPerServ;
@@ -26,8 +26,9 @@ public class DatosPersonalesController {
     @PostMapping("/Persona/agregar/datos") 
     public void agregarDatosPersona(@RequestBody DatosPersonales per){
         IDatosPerServ.agregarDatosPersona(per);
-    }  
-    @GetMapping("/Persona/ver/datos")
+    }
+    
+    @GetMapping("Persona/verdatos")
     @ResponseBody
     public List<DatosPersonales> verDatosPersona(){
         return IDatosPerServ.verDatosPersona();

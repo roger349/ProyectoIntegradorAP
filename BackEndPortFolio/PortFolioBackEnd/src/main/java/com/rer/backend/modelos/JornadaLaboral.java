@@ -6,11 +6,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 @Entity
 @Table(name="jornada_laboral")
 public class JornadaLaboral {
@@ -28,4 +24,21 @@ public class JornadaLaboral {
         this.id_jornada = id_jornada;
         this.tipo_jornada = tipo_jornada;
     }
+
+    public long getId_jornada() {
+        return id_jornada;
+    }
+
+    public void setId_jornada(long id_jornada) {
+        this.id_jornada = id_jornada;
+    }
+
+    public String getTipo_jornada() {
+        return tipo_jornada;
+    }
+
+    public void setTipo_jornada(String tipo_jornada) {
+        this.tipo_jornada = tipo_jornada;
+    }
+    
 }
