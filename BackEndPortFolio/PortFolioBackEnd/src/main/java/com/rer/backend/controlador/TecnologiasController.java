@@ -10,28 +10,31 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+//@CrossOrigin(origins = "http://localhost:4200/")
+@RequestMapping("/tecnologia")
 public class TecnologiasController {
      @Autowired
     private ITecnologiasService ITecServ;
     
-    @PostMapping("/agregar/datosTecnologia") 
+    @PostMapping("/agregardatos") 
     public void agregarDatosTec(@RequestBody Tecnologias tec){
         ITecServ.agregarDatosTec(tec);
     }  
-    @GetMapping("/ver/datosTecnologia")
+    @GetMapping("/verdatos")
     @ResponseBody
     public List<Tecnologias> verDatosTec(){
         return ITecServ.verDatosTec();
     }
-    @DeleteMapping("/deleteTecnologia/{id}")
+    @DeleteMapping("/delete/{id}")
      public void borrarDatosTec(@PathVariable long id){
         ITecServ.borrarDatosTec(id);
      }    
-    @PutMapping("/update/datosTecnologia")
+    @PutMapping("/updatedatos")
     public void updateDatosTec(@RequestBody Tecnologias tec) {
         ITecServ.updateDatosTec(tec);
     }

@@ -2,8 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { DatosPersonalesServService } from './DatosPersonalesServ.service';
 
-describe('DatosPersonalesService', () => {
-  let service: DatosPersonalesServService;
+describe('DatosPersonalesService', () => {let service: DatosPersonalesServService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});

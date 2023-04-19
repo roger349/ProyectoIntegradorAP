@@ -13,33 +13,35 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 //@CrossOrigin(origins = "http://localhost:4200/")
+@RequestMapping("/Persona")
 public class DatosPersonalesController {
     @Autowired
     private IDatosPersonalesService IDatosPerServ;
     
     @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/Persona/agregar/datos") 
+    @PostMapping("/agregardatos") 
     public void agregarDatosPersona(@RequestBody DatosPersonales per){
         IDatosPerServ.agregarDatosPersona(per);
     }
     
-    @GetMapping("Persona/verdatos")
+    @GetMapping("/verdatos")
     @ResponseBody
     public List<DatosPersonales> verDatosPersona(){
         return IDatosPerServ.verDatosPersona();
     }
     @PreAuthorize("hasRole('ADMIN')")
-    @DeleteMapping("/Persona/delete/{id}")
+    @DeleteMapping("/delete/{id}")
      public void borrarDatosPersona(@PathVariable long id){
         IDatosPerServ.borrarDatosPersona(id);
      }
     @PreAuthorize("hasRole('ADMIN')")    
-    @PutMapping("/Persona/update/datos")
+    @PutMapping("/updatedatos")
     public void updateDatosPersona(@RequestBody DatosPersonales per) {
         IDatosPerServ.updateDatosPersona(per);
     }
