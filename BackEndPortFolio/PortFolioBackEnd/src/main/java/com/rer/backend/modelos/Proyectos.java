@@ -16,15 +16,15 @@ public class Proyectos {
     private long id_proyecto;
       
     @Column(name = "nombre_proyecto", length = 45, nullable = false)
-    private String nombre_proyecto;
+    private String tipo_proyecto;
     @Column(name = "descripcion_proyecto", length = 200, nullable = false)
     private String descripcion_proyecto;
 
     public Proyectos() {
     }
-    public Proyectos(long id_proyecto, String nombre_proyecto, String descripcion_proyecto) {
+    public Proyectos(long id_proyecto, String tipo_proyecto, String descripcion_proyecto) {
         this.id_proyecto = id_proyecto;
-        this.nombre_proyecto = nombre_proyecto;
+        this.tipo_proyecto = tipo_proyecto;
         this.descripcion_proyecto = descripcion_proyecto;
     }
 
@@ -36,12 +36,12 @@ public class Proyectos {
         this.id_proyecto = id_proyecto;
     }
 
-    public String getNombre_proyecto() {
-        return nombre_proyecto;
+    public String getTipo_proyecto() {
+        return tipo_proyecto;
     }
 
-    public void setNombre_proyecto(String nombre_proyecto) {
-        this.nombre_proyecto = nombre_proyecto;
+    public void setTipo_proyecto(String tipo_proyecto) {
+        this.tipo_proyecto = tipo_proyecto;
     }
 
     public String getDescripcion_proyecto() {

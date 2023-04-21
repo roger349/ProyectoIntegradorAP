@@ -10,12 +10,15 @@ import { DatosPersonalesServService } from 'src/app/servicios/DatosPersonalesSer
 
 export class AcercadeComponent implements OnInit{
 
-  DatosPersonales: DatosPersonales = new DatosPersonales("","","","","");
+
+  DatosPersonales = new DatosPersonales("","","","","");
 
   constructor(public DatosPersonalesServicio:DatosPersonalesServService) {}
 
   ngOnInit(): void {
 
-  this.DatosPersonalesServicio.getDatosPersonales().subscribe(datosPersona => {this.DatosPersonales=datosPersona})
+  this.DatosPersonalesServicio.getDatosPersonales().subscribe(datospersonales => {
+       this.DatosPersonales=datospersonales;
+    });
   }
 }

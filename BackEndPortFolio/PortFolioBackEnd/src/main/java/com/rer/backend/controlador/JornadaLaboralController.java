@@ -10,28 +10,30 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/jornada")
 public class JornadaLaboralController {
      @Autowired
     private IJornadaLaboralService IJorLServ;
     
-    @PostMapping("/agregar/datosJornada") 
+    @PostMapping("/agregardatosJor") 
     public void agregarDatosJL(@RequestBody JornadaLaboral jor){
         IJorLServ.agregarDatosJL(jor);
     }  
-    @GetMapping("/ver/datosJornada")
+    @GetMapping("/verdatosJor")
     @ResponseBody
     public List<JornadaLaboral> verDatosJL(){
         return IJorLServ.verDatosJL();
     }
-    @DeleteMapping("/deleteJornada/{id}")
+    @DeleteMapping("/deleteJor/{id}")
      public void borrarDatosJL(@PathVariable long id){
         IJorLServ.borrarDatosJL(id);
      }    
-    @PutMapping("/update/datosJornada")
+    @PutMapping("/updatedatosJor")
     public void updateDatosJL(@RequestBody JornadaLaboral jor) {
         IJorLServ.updateDatosJL(jor);
     }

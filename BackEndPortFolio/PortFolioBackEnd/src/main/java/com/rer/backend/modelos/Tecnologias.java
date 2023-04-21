@@ -15,14 +15,14 @@ public class Tecnologias {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id_tecnologia;
       
-    @Column(name = "nombre_tecnologia", length = 45, nullable = false)
+    @Column(name = "nombre_tecnologia", nullable = false)
     private String nombre_tecnologia;
-    @Column(name = "porcentaje_tecnologia", length = 45, nullable = false)
-    private String porcentaje_tecnologia;
+    @Column(name = "porcentaje_tecnologia",nullable = false)
+    private int porcentaje_tecnologia;
 
     public Tecnologias() {
     }
-    public Tecnologias(long id_tecnologia, String nombre_tecnologia, String porcentaje_tecnologia) {
+    public Tecnologias(long id_tecnologia, String nombre_tecnologia, int porcentaje_tecnologia) {
         this.id_tecnologia = id_tecnologia;
         this.nombre_tecnologia = nombre_tecnologia;
         this.porcentaje_tecnologia = porcentaje_tecnologia;
@@ -44,11 +44,11 @@ public class Tecnologias {
         this.nombre_tecnologia = nombre_tecnologia;
     }
 
-    public String getPorcentaje_tecnologia() {
+    public int getPorcentaje_tecnologia() {
         return porcentaje_tecnologia;
     }
 
-    public void setPorcentaje_tecnologia(String porcentaje_tecnologia) {
+    public void setPorcentaje_tecnologia(int porcentaje_tecnologia) {
         this.porcentaje_tecnologia = porcentaje_tecnologia;
     }
     

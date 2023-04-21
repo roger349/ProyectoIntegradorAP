@@ -10,19 +10,21 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/experiencia")
 public class ExperienciaLaboralController {
-     @Autowired
+    @Autowired
     private IExperienciaLaboralService IExpLServ;
     
-    @PostMapping("/agregar/datosExperiencia") 
+    @PostMapping("/agregardatosExp") 
     public void agregarDatosEL(@RequestBody ExperienciaLaboral exp){
-        IExpLServ.agregarDatosEL(exp);
+       IExpLServ.agregarDatosEL(exp);
     }  
-    @GetMapping("/ver/datosExperiencia")
+    @GetMapping("/verdatosExp")
     @ResponseBody
     public List<ExperienciaLaboral> verDatosEL(){
         return IExpLServ.verDatosEL();
@@ -31,7 +33,7 @@ public class ExperienciaLaboralController {
      public void borrarDatosEL(@PathVariable long id){
         IExpLServ.borrarDatosEL(id);
      }    
-    @PutMapping("/update/datosExperiencia")
+    @PutMapping("/updatedatosExp")
     public void updateDatosEL(@RequestBody ExperienciaLaboral exp) {
         IExpLServ.updateDatosEL(exp);
     }
