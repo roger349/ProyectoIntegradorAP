@@ -8,17 +8,12 @@ import { ExperienciaLaboralServService } from 'src/app/servicios/ExperienciaLabo
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  ExpLab: ExperienciaLaboral[] = []
 
-  constructor(private ExperienciaLaboralServicio : ExperienciaLaboralServService) {};
+
+  constructor(private ELServ : ExperienciaLaboralServService) {};
   
   ngOnInit(): void {
-
-    this.getExpLab();
+    this.ELServ.getELab('http://localhost:8080/experiencia/verdatosExp').subscribe((edu : any)=>{
+            console.log(edu)} );
   }
-  private getExpLab(){
-    this.ExperienciaLaboralServicio.getList().subscribe(data => {
-      this.ExpLab = data;
-    });
-
 }

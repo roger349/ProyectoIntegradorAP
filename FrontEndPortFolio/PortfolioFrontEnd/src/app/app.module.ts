@@ -14,9 +14,9 @@ import { HomeComponent } from './Componentes/home/home.component';
 import { LogosApRedesSocialesLoginComponent } from './Componentes/logos-ap-redes-sociales-login/logos-ap-redes-sociales-login.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './componentes/footer/footer.component';
 import { EdicionHsskillsComponent } from './Componentes/hsskills/edicion-hsskills.component';
 import { NuevoHsskillsComponent } from './Componentes/hsskills/nuevo-hsskills.component'
+import { FooterComponent } from './Componentes/footer/footer.component';
  
 @NgModule({
   declarations: [

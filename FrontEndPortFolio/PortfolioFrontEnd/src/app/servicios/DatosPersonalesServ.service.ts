@@ -9,12 +9,12 @@ import { DatosPersonales } from '../modelos/DatosPersonales.model';
 })
 
 export class DatosPersonalesServService {
-  
-  URL = 'http://localhost:8080/Persona'; 
+
+  URL= 'http://localhost:8080/persona/verdatos';
   
   constructor(private http:HttpClient) { }
-
-      public getDatosPersonales() : Observable<DatosPersonales>{
-        return this.http.get<DatosPersonales>(this.URL +'/verdatos');
-      }
+    
+  public getDP(): Observable<DatosPersonales> {
+    return this.http.get<DatosPersonales>(this.URL);
+  } 
 }
