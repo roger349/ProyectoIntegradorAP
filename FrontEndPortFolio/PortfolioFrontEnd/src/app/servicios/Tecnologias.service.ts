@@ -8,12 +8,12 @@ import { Tecnologias } from '../modelos/Tecnologias.model';
 })
 export class TecnologiasService {
 
-  URL = 'http://localhost:8080/tecnologia';
+  URL = 'http://localhost:8080/tecnologia/verdatosTec';
 
   constructor(private http : HttpClient) { }
 
-  public verDatos(): Observable<Tecnologias[]>{
-    return this.http.get<Tecnologias[]>(this.URL + '/verdatos');
+  public TecList(): Observable<Tecnologias[]>{
+    return this.http.get<Tecnologias[]>(this.URL);
   }
 
   public agregarDatos(tec: Tecnologias): Observable<any>{

@@ -4,15 +4,12 @@
    <img src="../../../assets/team.jpg">
    </div>
    <div class="col-11">
-       <ul>
-          <li>Trabajo 1 (years)</li>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eligendi, 
-            error odio doloribus sequi asperiores natus, pariatur quos praesentium facere fuga suscipit
-            necessitatibus eum voluptatum, omnis temporibus quasi dignissimos voluptas.</p>
-          <li>Trabajo 2 (years)</li>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus optio quae, 
-            exercitationem obcaecati porro labore voluptatem? Vero soluta, autem voluptatibus accusamus
-            tenetur nulla, at aut est, quis perspiciatis assumenda recusandae?</p>
-       </ul>
+    <div *ngFor="let exp of exper">
+      <br> 
+      <h1>Empresa: {{exp.nombre_empresa}}, Fecha Inicio: {{exp.fecha_inicio}}, Fecha Fin: {{exp.fecha_fin}}, 
+        Descripcion Puesto: {{exp.descripcion_puesto}}</h1>
+      </div>    
    </div>
 </div>
+
+

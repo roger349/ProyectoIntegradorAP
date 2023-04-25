@@ -15,7 +15,7 @@ public class Proyectos {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id_proyecto;
       
-    @Column(name = "nombre_proyecto", length = 45, nullable = false)
+    @Column(name = "tipo_proyecto", length = 45, nullable = false)
     private String tipo_proyecto;
     @Column(name = "descripcion_proyecto", length = 200, nullable = false)
     private String descripcion_proyecto;

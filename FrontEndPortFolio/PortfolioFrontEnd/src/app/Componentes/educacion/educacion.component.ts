@@ -9,11 +9,12 @@ import { EducacionService } from '../../servicios/Educacion.service'
 })
 export class EducacionComponent implements OnInit {
   
+  educ: Educacion[] = [];
   
   constructor(public eduservice : EducacionService) {}
   
   ngOnInit(): void {
-       this.eduservice.getEducacion('http://localhost:8080/educacion/verdatosEdu').subscribe((edu : any)=>{
-            console.log(edu)} );
+       this.eduservice.EduList().subscribe(edu => { this.educ=edu;
+            console.log(edu);} )         
   }
 }

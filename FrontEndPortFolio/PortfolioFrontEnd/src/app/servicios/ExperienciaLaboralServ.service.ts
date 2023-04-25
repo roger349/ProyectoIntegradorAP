@@ -8,10 +8,12 @@ import { ExperienciaLaboral } from '../modelos/ExperienciaLaboral.model';
 })
 export class ExperienciaLaboralServService {
 
-  private URL1= "http://localhost:8080/experiencia"; 
+  URL= "http://localhost:8080/experiencia/verdatosExp"; 
   
   constructor(private http : HttpClient) { }
-  getELab(url : string){
-    return this.http.get(url);
+  
+  public ExpList(): Observable<ExperienciaLaboral[]>{
+    return this.http.get<ExperienciaLaboral[]>(this.URL);         
   }
+
 }

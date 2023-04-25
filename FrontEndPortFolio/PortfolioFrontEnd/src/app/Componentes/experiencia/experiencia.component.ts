@@ -9,11 +9,12 @@ import { ExperienciaLaboralServService } from 'src/app/servicios/ExperienciaLabo
 })
 export class ExperienciaComponent implements OnInit {
 
-
+  exper: ExperienciaLaboral[] = [];
+  
   constructor(private ELServ : ExperienciaLaboralServService) {};
   
   ngOnInit(): void {
-    this.ELServ.getELab('http://localhost:8080/experiencia/verdatosExp').subscribe((edu : any)=>{
-            console.log(edu)} );
+    this.ELServ.ExpList().subscribe(exp => { this.exper=exp;
+      console.log(exp);} )  
   }
 }

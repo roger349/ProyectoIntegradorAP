@@ -9,16 +9,13 @@ import { DatosPersonalesServService } from 'src/app/servicios/DatosPersonalesSer
 })
 
 export class AcercadeComponent implements OnInit{
- 
- DatosPer: DatosPersonales = new DatosPersonales("","","","","");
 
+ DatosPer: DatosPersonales[]=[];
+  /*DatosPer: DatosPersonales = new DatosPersonales("","","","","");*/
+  
   constructor(public DPServ: DatosPersonalesServService) {}
 
   ngOnInit(): void {
-   this.persona();
-  }
-  persona(){
-    this.DPServ.getDP().subscribe(dper => {this.DatosPer = dper;   
-    console.log(dper) } );
+  this.DPServ.DatPer().subscribe( data => {this.DatosPer = data});
   }  
 }

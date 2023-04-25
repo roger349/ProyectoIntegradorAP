@@ -14,7 +14,8 @@ export class DatosPersonalesServService {
   
   constructor(private http:HttpClient) { }
     
-  public getDP(): Observable<DatosPersonales> {
-    return this.http.get<DatosPersonales>(this.URL);
-  } 
+  public DatPer(): Observable<DatosPersonales[]> {
+    return this.http.get<DatosPersonales[]>(this.URL);
+  }   
 }
+

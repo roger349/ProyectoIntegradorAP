@@ -7,9 +7,9 @@ export class Educacion{
 
     constructor(id_educacion:number, titulo:String, condicion:String, institucion:String) {
 
-        this.id_educacion = id_educacion;
-        this.titulo = titulo;
-        this.condicion = condicion;
-        this.institucion = institucion;   
+    this.id_educacion = id_educacion;
+    this.titulo = titulo;
+    this.condicion = condicion;
+    this.institucion = institucion;   
     }
 }

@@ -4,16 +4,9 @@
   <img src="../../../assets/team.jpg">
   </div>
   <div class="col-11">
-      <ul>
-         <li>Bachiller</li>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eligendi, 
-           error odio doloribus sequi asperiores natus, pariatur quos praesentium facere fuga suscipit
-           necessitatibus eum voluptatum, omnis temporibus quasi dignissimos voluptas.</p>
-         <li>Estudiante</li>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus optio quae, 
-           exercitationem obcaecati porro labore voluptatem? Vero soluta, autem voluptatibus accusamus
-           tenetur nulla, at aut est, quis perspiciatis assumenda recusandae?</p>
-         <li>Curso Armado y Reparacion de PC</li>  
-      </ul>
+       <div *ngFor="let ed of educ">
+       <br> 
+       <h1>Titulo: {{ed.titulo}}, Condicion: {{ed.condicion}},  Institucion:  {{ed.institucion}}</h1>
+       </div>    
   </div>
 </div>

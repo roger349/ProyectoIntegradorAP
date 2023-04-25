@@ -1,14 +1,13 @@
-div h1 {
-  color:darkgray;
-  text-align: left;
-  font-size: small;
-  margin-left: 1%;
+.row {
+  margin-top: 2%;
 }
-div p {
+h1 {
+  padding-left:2%;
   color:darkgray;
-  float: center;
   font-size: medium;
-  margin-left: 65px;
-}                
-
-
+} 
+img {
+  width: 140%;
+  height: 100%;
+  float:inline-start;
+}

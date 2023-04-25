@@ -1,13 +1,13 @@
 export  class DatosPersonales {
 
        id_datos_Personales?:number;
-       nombre: String;
-       apellido: String;
-       fecha_nacimiento: String;
-       estado_civil: String;
-       correo_electronico: String;
+       nombre: string;
+       apellido: string;
+       fecha_nacimiento: string;
+       estado_civil: string;
+       correo_electronico: string;
 
-       constructor(nombre: String, apellido: String, fecha_nacimiento: String,estado_civil: String, correo_electronico: String) {
+       constructor(nombre: string, apellido: string, fecha_nacimiento: string,estado_civil: string, correo_electronico: string) {
                         
        this.nombre = nombre;
        this.apellido = apellido;
