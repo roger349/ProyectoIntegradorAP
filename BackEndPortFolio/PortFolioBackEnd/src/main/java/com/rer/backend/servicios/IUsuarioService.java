@@ -1,7 +1,7 @@
 package com.rer.backend.servicios;
 
 
-import com.rer.backend.modelos.Usuario;
+import com.rer.backend.Seguridad.Entidad.Usuario;
 import java.util.List;
 
 public interface IUsuarioService {

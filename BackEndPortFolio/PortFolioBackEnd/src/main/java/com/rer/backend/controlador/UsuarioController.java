@@ -1,6 +1,6 @@
 package com.rer.backend.controlador;
 
-import com.rer.backend.modelos.Usuario;
+import com.rer.backend.Seguridad.Entidad.Usuario;
 import com.rer.backend.servicios.IUsuarioService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.rer.backend.repositorios;
 
-import com.rer.backend.modelos.Usuario;
+import com.rer.backend.Seguridad.Entidad.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
